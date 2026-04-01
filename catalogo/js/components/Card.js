@@ -13,9 +13,8 @@ export function createCard(item) {
 
     const iframe = document.createElement('iframe');
     iframe.frameBorder = "0";
-    iframe.allow = "autoplay; encrypted-media; picture-in-picture";
+    iframe.allow = "autoplay; encrypted-media; picture-in-picture; web-share";
     iframe.allowFullscreen = true;
-    iframe.title = "Trailer preview";
 
     const videoId = getYouTubeId(item.youtube);
 
@@ -62,26 +61,22 @@ export function createCard(item) {
         card.appendChild(pbContainer);
     }
 
-    let playTimeout;
     card.addEventListener('mouseenter', () => {
         const rect = card.getBoundingClientRect();
         const windowWidth = window.innerWidth;
-        
+
         if (rect.left < 100) {
             card.classList.add('origin-left');
         } else if (rect.right > windowWidth - 100) {
             card.classList.add('origin-right');
         }
 
-        playTimeout = setTimeout(() => {
-            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=${videoId}`;
-            iframe.classList.add('playing');
-            img.classList.add('playing-video');
-        }, 600);
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=${videoId}`;
+        iframe.classList.add('playing');
+        img.classList.add('playing-video');
     });
 
     card.addEventListener('mouseleave', () => {
-        clearTimeout(playTimeout);
         iframe.classList.remove('playing');
         img.classList.remove('playing-video');
         iframe.src = "";
