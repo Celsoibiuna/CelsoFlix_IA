@@ -1,4 +1,4 @@
-import { categories } from '../data.js';
+import { categories } from './data.js';
 import { createCarousel } from './Carousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
