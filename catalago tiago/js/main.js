@@ -1,6 +1,12 @@
 import { categories } from './data.js';
 import { createCarousel } from './Carousel.js';
 
+function selecionarPerfil(nome, imagem) {
+  localStorage.setItem("perfilAtivoNome", nome);
+  localStorage.setItem("perfilAtivoImagem", imagem);
+
+  window.location.href = "catalogo.html";
+}
 document.addEventListener('DOMContentLoaded', () => {
     const nomePerfil = localStorage.getItem('perfilAtivoNome');
     let imagemPerfil = localStorage.getItem('perfilAtivoImagem');
