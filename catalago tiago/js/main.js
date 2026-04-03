@@ -1,5 +1,5 @@
-import { categories } from './data.js';
-import { createCarousel } from './components/Carousel.js';
+import { categories } from '../data.js';
+import { createCarousel } from './Carousel.js';
 
 document.addEventListener('DOMContentLoaded', () => {
     const nomePerfil = localStorage.getItem('perfilAtivoNome');
