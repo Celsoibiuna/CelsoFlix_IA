@@ -1,4 +1,5 @@
 export const categories = [
+    
     {
         title: "filmes",
         items: [
