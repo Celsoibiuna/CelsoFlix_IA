@@ -3,38 +3,218 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cobra Kai - Saiba Mais</title>
-  <link rel="stylesheet" href="catalogo.css">
+  <title>Saiba Mais - Celsoflix</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #050505;
+      color: #f1f1f1;
+      min-height: 100vh;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn-voltar {
+      background: #262626;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 18px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 20px;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn-voltar:hover {
+      background: #3d3d3d;
+      transform: scale(1.03);
+    }
+
+    .info-section {
+      width: 100%;
+      max-width: 900px;
+      background: #111;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .info-image {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 18px;
+    }
+
+    .summary-item {
+      margin-bottom: 22px;
+    }
+
+    .summary-item h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #e50914;
+    }
+
+    .summary-item p {
+      font-size: 16px;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    .divider {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 24px 0;
+    }
+
+    @media (max-width: 700px) {
+      .info-section {
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .summary-item h3 {
+        font-size: 18px;
+      }
+
+      .summary-item p {
+        font-size: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Botão Voltar -->
   <button class="btn-voltar" onclick="window.history.back()">⟵ Voltar</button>
 
-  <main class="info-section">
-    <img src="img/cobrkai2.webp" alt="Cobra Kai" class="info-image">
-    <h1>Cobra Kai: A Saga Completa</h1>
+  <main class="info-section" id="info-section">
+    <img src="img/cobrkai2.webp" alt="Cobra Kai" class="info-image" id="info-image">
+    <h1 id="info-title">Cobra Kai: A Saga Completa</h1>
 
-    <h3>1ª Temporada</h3>
-    <p>Johnny Lawrence busca redenção ao reabrir o dojo Cobra Kai, treinando Miguel contra o bullying. Daniel LaRusso vê sua paz ameaçada pelo retorno do dojo, reacendendo a rivalidade histórica de 1984.</p>
+    <div id="summary-content">
+      <div class="summary-item">
+        <h3>1ª Temporada</h3>
+        <p>Johnny Lawrence busca redenção ao reabrir o dojo Cobra Kai, treinando Miguel contra o bullying. Daniel LaRusso vê sua paz ameaçada pelo retorno do dojo, reacendendo a rivalidade histórica de 1984.</p>
+      </div>
 
-    <h3>2ª Temporada</h3>
-    <p>O Cobra Kai ganha fama, mas a chegada de John Kreese traz uma filosofia agressiva. Daniel abre o Miyagi-Do para ensinar defesa pessoal, resultando em uma guerra escolar com consequências trágicas.</p>
+      <div class="summary-item">
+        <h3>2ª Temporada</h3>
+        <p>O Cobra Kai ganha fama, mas a chegada de John Kreese traz uma filosofia agressiva. Daniel abre o Miyagi-Do para ensinar defesa pessoal, resultando em uma guerra escolar com consequências trágicas.</p>
+      </div>
 
-    <h3>3ª Temporada</h3>
-    <p>Após a briga brutal, Miguel luta para andar e os dojos são interditados. Johnny e Daniel viajam em busca de respostas e percebem que precisam se unir para derrotar a influência sombria de Kreese.</p>
+      <div class="summary-item">
+        <h3>3ª Temporada</h3>
+        <p>Após a briga brutal, Miguel luta para andar e os dojos são interditados. Johnny e Daniel viajam em busca de respostas e percebem que precisam se unir para derrotar a influência sombria de Kreese.</p>
+      </div>
 
-    <h3>4ª Temporada</h3>
-    <p>O destino do karatê no Vale será decidido no Torneio All Valley. O vilão Terry Silver retorna para ajudar Kreese, usando métodos cruéis para testar a aliança entre Johnny e Daniel.</p>
+      <div class="summary-item">
+        <h3>4ª Temporada</h3>
+        <p>O destino do karatê no Vale será decidido no Torneio All Valley. O vilão Terry Silver retorna para ajudar Kreese, usando métodos cruéis para testar a aliança entre Johnny e Daniel.</p>
+      </div>
 
-    <h3>5ª Temporada</h3>
-    <p>Terry Silver expande o império Cobra Kai pela cidade. Daniel conta com a ajuda de Chozen para enfrentar a expansão, enquanto Johnny tenta resgatar Miguel em uma jornada pessoal no México.</p>
+      <div class="summary-item">
+        <h3>5ª Temporada</h3>
+        <p>Terry Silver expande o império Cobra Kai pela cidade. Daniel conta com a ajuda de Chozen para enfrentar a expansão, enquanto Johnny tenta resgatar Miguel em uma jornada pessoal no México.</p>
+      </div>
 
-    <h3>6ª Temporada</h3>
-    <p>Com Silver derrotado, os alunos se preparam para o Sekai Taikai, o maior torneio mundial. Novos segredos sobre o mestre Miyagi surgem, exigindo um nível de maestria nunca visto antes.</p>
+      <div class="summary-item">
+        <h3>6ª Temporada</h3>
+        <p>Com Silver derrotado, os alunos se preparam para o Sekai Taikai, o maior torneio mundial. Novos segredos sobre o mestre Miyagi surgem, exigindo um nível de maestria nunca visto antes.</p>
+      </div>
 
-    <h3>7ª Temporada</h3>
-    <p>A rivalidade chega ao ápice no palco mundial. As fronteiras entre mestre e aluno se confundem enquanto o destino do karatê é decidido em combates finais pela glória e pelo legado.</p>
-</main>>
+      <div class="summary-item">
+        <h3>7ª Temporada</h3>
+        <p>A rivalidade chega ao ápice no palco mundial. As fronteiras entre mestre e aluno se confundem enquanto o destino do karatê é decidido em combates finais pela glória e pelo legado.</p>
+      </div>
+    </div>
   </main>
+
+  <script>
+    function getProfileName() {
+      return localStorage.getItem('perfilAtivoNome') || 'Celso';
+    }
+
+    const tiagoContent = {
+      image: 'img/harryphoter.jpg',
+      title: 'Harry Potter - Saiba Mais',
+      summary: [
+        {
+          heading: '1. Harry Potter e a Pedra Filosofal (2001)',
+          text: 'Harry descobre que é um bruxo e vai para Hogwarts. Lá, faz amizade com Ron e Hermione e enfrenta seu primeiro desafio contra Voldemort, que tenta roubar a Pedra Filosofal para voltar ao poder.'
+        },
+        {
+          heading: '2. Harry Potter e a Câmara Secreta (2002)',
+          text: 'Uma ameaça misteriosa petrifica alunos em Hogwarts. Harry descobre a Câmara Secreta e enfrenta um monstro controlado por uma versão jovem de Voldemort.'
+        },
+        {
+          heading: '3. Harry Potter e o Prisioneiro de Azkaban (2004)',
+          text: 'Harry descobre mais sobre seu passado e conhece Sirius Black, que aparentemente quer matá-lo, mas na verdade é seu padrinho e aliado.'
+        },
+        {
+          heading: '4. Harry Potter e o Cálice de Fogo (2005)',
+          text: 'Harry participa do perigoso Torneio Tribruxo. No final, Voldemort retorna com corpo físico, marcando o início de tempos mais sombrios.'
+        },
+        {
+          heading: '5. Harry Potter e a Ordem da Fênix (2007)',
+          text: 'O Ministério da Magia nega o retorno de Voldemort. Harry cria um grupo secreto para ensinar defesa contra as artes das trevas e enfrenta o vilão novamente.'
+        },
+        {
+          heading: '6. Harry Potter e o Enigma do Príncipe (2009)',
+          text: 'Harry descobre segredos sobre o passado de Voldemort e aprende sobre as Horcruxes, objetos que guardam partes da alma do vilão.'
+        },
+        {
+          heading: '7. Harry Potter e as Relíquias da Morte – Parte 1 (2010)',
+          text: 'Harry, Ron e Hermione deixam Hogwarts para destruir as Horcruxes. O mundo bruxo entra em guerra.'
+        },
+        {
+          heading: '8. Harry Potter e as Relíquias da Morte – Parte 2 (2011)',
+          text: 'A batalha final acontece em Hogwarts. Harry enfrenta Voldemort e finalmente o derrota, trazendo paz ao mundo mágico.'
+        }
+      ]
+    };
+
+    const profile = getProfileName();
+    if (profile === 'Tiago') {
+      document.getElementById('info-image').src = tiagoContent.image;
+      document.getElementById('info-image').alt = 'Harry Potter';
+      document.getElementById('info-title').textContent = tiagoContent.title;
+
+      const summaryContainer = document.getElementById('summary-content');
+      summaryContainer.innerHTML = '';
+      tiagoContent.summary.forEach(item => {
+        const section = document.createElement('div');
+        section.className = 'summary-item';
+
+        const heading = document.createElement('h3');
+        heading.textContent = item.heading;
+        section.appendChild(heading);
+
+        const paragraph = document.createElement('p');
+        paragraph.textContent = item.text;
+        section.appendChild(paragraph);
+
+        summaryContainer.appendChild(section);
+      });
+    }
+  </script>
 </body>
 </html>

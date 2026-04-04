@@ -3,12 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>assistir</title>
+    <title>Assistir - Celsoflix</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 900px;
+            background-color: #111;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .btn-play {
+            background-color: #e50914;
+            color: #fff;
+        }
+
+        .btn-play:hover {
+            background-color: #f00;
+            transform: scale(1.05);
+        }
+
+        .btn-voltar {
+            background-color: #564d4d;
+            color: #fff;
+        }
+
+        .btn-voltar:hover {
+            background-color: #7a6f6f;
+            transform: scale(1.05);
+        }
+
+        .title {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 900px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .btn-voltar {
+            padding: 10px 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .video-container {
+                border-radius: 0;
+            }
+            
+            .btn {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+            
+            .title {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <button class="btn-voltar" onclick="window.history.back()">⟵ Voltar</button>
-   <section>
-    <a href="img/cobrakaivideo.mp4" class="btn btn-play">▶ Assistir</a>
-   </section> 
+    <div class="header">
+        <h1 class="title" id="video-title">Cobra Kai</h1>
+        <button class="btn btn-voltar" onclick="window.history.back()">⟵ Voltar</button>
+    </div>
+
+    <div class="video-container">
+        <video id="video-player" controls autoplay>
+            <source id="video-source" src="img/cobrakaivideo.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+    </div>
+
+    <div class="controls">
+        <button class="btn btn-play" id="play-pause-btn" type="button">⏸ Pausar</button>
+    </div>
+
+    <script>
+        function getProfileName() {
+            const profileName = localStorage.getItem('perfilAtivoNome');
+            return profileName || 'Celso';
+        }
+
+        const videoConfig = {
+            Celso: {
+                src: 'img/cobrakaivideo.mp4',
+                title: 'Cobra Kai'
+            },
+            Tiago: {
+                src: 'img/harrypoter.mp4',
+                title: 'Harry Potter'
+            },
+            Arielly: {
+                src: 'img/cobrakaivideo.mp4',
+                title: 'Cobra Kai'
+            }
+        };
+
+        const profileName = getProfileName();
+        const config = videoConfig[profileName] || videoConfig.Celso;
+
+        const videoPlayer = document.getElementById('video-player');
+        const playPauseBtn = document.getElementById('play-pause-btn');
+
+        document.getElementById('video-title').textContent = config.title;
+        document.getElementById('video-source').src = config.src;
+        videoPlayer.load();
+
+        function updatePlayPauseButton() {
+            if (videoPlayer.paused) {
+                playPauseBtn.textContent = '▶ Play';
+            } else {
+                playPauseBtn.textContent = '⏸ Pausar';
+            }
+        }
+
+        playPauseBtn.addEventListener('click', () => {
+            if (videoPlayer.paused) {
+                videoPlayer.play();
+            } else {
+                videoPlayer.pause();
+            }
+            updatePlayPauseButton();
+        });
+
+        videoPlayer.addEventListener('play', updatePlayPauseButton);
+        videoPlayer.addEventListener('pause', updatePlayPauseButton);
+
+        updatePlayPauseButton();
+    </script>
 </body>
 </html>
