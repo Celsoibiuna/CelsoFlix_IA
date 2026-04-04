@@ -1,6 +1,6 @@
 import { createCard } from './Card.js';
 
-export function createCarousel(category) {
+export function createCarousel(category, profileName) {
     const section = document.createElement('div');
     section.className = 'slider-section';
 
@@ -23,7 +23,7 @@ export function createCarousel(category) {
     row.className = 'movie-row';
 
     category.items.forEach(item => {
-        const card = createCard(item);
+        const card = createCard(item, profileName);
         row.appendChild(card);
     });
 

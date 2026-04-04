@@ -192,6 +192,29 @@
       ]
     };
 
+    const ariellyContent = {
+      image: 'img/bolofofo.jpg',
+      title: 'Bolofofos - Saiba Mais',
+      summary: [
+        {
+          heading: 'Conteúdo',
+          text: 'Vídeos animados com músicas repetitivas e coreografias simples, ideais para o público pré-escolar.'
+        },
+        {
+          heading: 'Polêmica',
+          text: 'Alguns relatos sugerem que o ritmo frenético e o excesso de estímulo visual podem causar inquietação em crianças, levantando discussões sobre o tempo de tela.'
+        },
+        {
+          heading: 'Sucesso',
+          text: 'O canal acumula bilhões de visualizações, tornando-se uma das marcas infantis mais queridas do Brasil.'
+        },
+        {
+          heading: 'Personagens',
+          text: 'Rick, Pow, Pipi, Sophie e Bunny, focando em temas educativos e divertidos, sendo uma marca popular de brinquedos e shows.'
+        }
+      ]
+    };
+
     const profile = getProfileName();
     if (profile === 'Tiago') {
       document.getElementById('info-image').src = tiagoContent.image;
@@ -201,6 +224,27 @@
       const summaryContainer = document.getElementById('summary-content');
       summaryContainer.innerHTML = '';
       tiagoContent.summary.forEach(item => {
+        const section = document.createElement('div');
+        section.className = 'summary-item';
+
+        const heading = document.createElement('h3');
+        heading.textContent = item.heading;
+        section.appendChild(heading);
+
+        const paragraph = document.createElement('p');
+        paragraph.textContent = item.text;
+        section.appendChild(paragraph);
+
+        summaryContainer.appendChild(section);
+      });
+    } else if (profile === 'Arielly') {
+      document.getElementById('info-image').src = ariellyContent.image;
+      document.getElementById('info-image').alt = 'Bolofofos';
+      document.getElementById('info-title').textContent = ariellyContent.title;
+
+      const summaryContainer = document.getElementById('summary-content');
+      summaryContainer.innerHTML = '';
+      ariellyContent.summary.forEach(item => {
         const section = document.createElement('div');
         section.className = 'summary-item';
 

@@ -1,6 +1,6 @@
-import { getYouTubeId, getRandomMatchScore, getRandomDuration, getRandomAgeBadge } from '../utils.js';
+import { getYouTubeId, getRandomMatchScore, getRandomDuration, getAgeBadge } from '../utils.js';
 
-export function createCard(item) {
+export function createCard(item, profileName) {
     const card = document.createElement('div');
     card.className = 'movie-card';
     if (item.progress) {
@@ -21,7 +21,7 @@ export function createCard(item) {
     card.appendChild(iframe);
     card.appendChild(img);
 
-    const ageBadge = getRandomAgeBadge();
+    const ageBadge = item.ageBadge || getAgeBadge(profileName);
 
     const details = document.createElement('div');
     details.className = 'card-details';

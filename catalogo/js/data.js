@@ -45,15 +45,15 @@ export const baseCategories = [
 
 export const tiagoCategories = [
     {
-        title: "filmes de ação",
+        title: "filmes",
         items: [
             {
-                img: "https://br.web.img3.acsta.net/pictures/21/06/09/17/19/0348418.jpg",
+                img: "https://m.media-amazon.com/images/S/pv-target-images/29a11e6d5b603eb53e1479e2886e3babf221fa47050f715365492679d357c3ac.jpg",
                 top10: true,
                 badge: "Lançamento",
                 badgeColor: "red",
                 progress: 0,
-                youtube: "https://www.youtube.com/watch?v=s7EdQ4FqbhY"
+                youtube: "https://www.youtube.com/watch?v=MHnA8FQuEB0"
             },
             {
                 img: "https://townsquare.media/site/295/files/2020/11/20a86206ec15a3d88a12f22ee07fef62.jpg?w=780&q=75",
@@ -66,9 +66,9 @@ export const tiagoCategories = [
                 youtube: "https://www.youtube.com/watch?v=giXco2jaZ_4"
             },
             {
-                img: "https://upload.wikimedia.org/wikipedia/pt/d/d1/Mission_Impossible_Fallout.jpg",
+                img: "https://lumiere-a.akamaihd.net/v1/images/image002_d99d6b28.jpeg",
                 progress: 0,
-                youtube: "https://www.youtube.com/watch?v=wb49-oV0F78"
+                youtube: "https://www.youtube.com/watch?v=lEzmc22PDRg&t=2s"
             }
         ]
     },
@@ -76,24 +76,24 @@ export const tiagoCategories = [
         title: "Séries",
         items: [
             {
-                img: "https://upload.wikimedia.org/wikipedia/pt/7/7d/Parasite_poster.jpg",
+                img: "https://i.ytimg.com/vi/zUd3y5sU2w0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDra0H8OCXNC0Lh32mX0LpG7KF-ZQ",
                 top10: true,
                 badge: "Oscar",
                 badgeColor: "red",
-                youtube: "https://www.youtube.com/watch?v=SEUXfv87Wpk"
+                youtube: "https://www.youtube.com/watch?v=mMFkI6dfk_Y&t=3s"
             },
             {
-                img: "https://upload.wikimedia.org/wikipedia/en/7/70/Avengers_Endgame_poster.jpg",
-                youtube: "https://www.youtube.com/watch?v=TcMBFSGVi1c"
+                img: "https://sm.ign.com/ign_br/news/t/the-flash-/the-flash-announces-next-big-crossover-event_wd49.jpg",
+                youtube: "https://www.youtube.com/watch?v=zrtVOZ4YPFw&t=8s"
             },
             {
-                img: "https://upload.wikimedia.org/wikipedia/en/f/f1/Manchester_by_the_Sea.png",
+                img: "https://mitelefe.com/media/cache/post16x9/Entretenimiento/media/18273054/cobra-kai.png",
                 badge: "Emocionante",
-                youtube: "https://www.youtube.com/watch?v=8xTU0Yw1Muo"
+                youtube: "https://www.youtube.com/watch?v=dIC3208563E"
             },
             {
-                img: "https://upload.wikimedia.org/wikipedia/pt/7/79/Whiplash_poster.jpg",
-                youtube: "https://www.youtube.com/watch?v=7d_jQycdQGo"
+                img: "https://upload.wikimedia.org/wikipedia/pt/thumb/6/68/Logotipo_de_Reis.jpg/330px-Logotipo_de_Reis.jpg",
+                youtube: "https://www.youtube.com/watch?v=b1wUXyT7Tkc"
             }
         ]
     }
@@ -101,49 +101,54 @@ export const tiagoCategories = [
 
 export const ariellyCategories = [
     {
-        title: "séries de aventura",
+        title: "Desenhos Animados",
         items: [
             {
-                img: "https://occ-0-714-424.1.nflxso.net/dnm/api/v6/E8vDc_Jx-6Gu_OycizyqtM0V4k8/AAAAQF0I3u2nEB11AikyPP8UQJ10NZXi-Y9FnQ8SiS0ZQrG9D4j5Hd8NSiO1SgEoG4C8F9iUkr7z1hbD7td0hhxJm6TjJkx3LW4xN1ndufi70XkX4Eb7aV-mQ3qOSv5Ai3Y1LzZp_mPSgBTR3Y.png?r=d77",
+                img: "https://i.ytimg.com/vi/CYe9mXL9zO0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB3nXqCXAJflFEbrLIQghzDCYGu9A",
                 top10: true,
                 badge: "Número 1",
                 badgeColor: "red",
-                youtube: "https://www.youtube.com/watch?v=er9u-lHx1iA"
+                youtube: "https://www.youtube.com/watch?v=41aGCrXM20E"
             },
             {
-                img: "https://br.web.img2.acsta.net/pictures/22/06/28/19/37/4042833.jpg",
-                youtube: "https://www.youtube.com/watch?v=Yqmc7CGVN8A"
-            },
-            {
-                img: "https://upload.wikimedia.org/wikipedia/pt/5/5b/Stranger_Things_4.jpg",
+                img: "https://i.scdn.co/image/ab67616d0000b273765c99f2dc012c827d83482b",
                 badge: "Top",
-                youtube: "https://www.youtube.com/watch?v=b9EkMc79ZSU"
+                youtube: "https://www.youtube.com/watch?v=4MCOtam5pAg"
             },
             {
-                img: "https://upload.wikimedia.org/wikipedia/pt/0/09/Bridgerton_-_1%C2%AA_Temporada.jpg",
-                youtube: "https://www.youtube.com/watch?v=rj7_jFVgR40"
+                img: "https://animarestudio.com.br/wp-content/uploads/2018/12/historia-da-galinha-pintadinha-no-animarestudio.jpg",
+                badge: "Clássico",
+                youtube: "https://www.youtube.com/watch?v=azJUcHqjkBk"
+            },
+            {
+                img: "https://escotilha.com.br/wp-content/uploads/2021/02/A-Casa-Magica-da-Gabby.jpg",
+                badge: "Divertido",
+                youtube: "https://www.youtube.com/watch?v=usYZ2AqRveo&t=3s"
             }
         ]
     },
     {
-        title: "filmes românticos",
+        title: "Filmes Infantis",
         items: [
             {
-                img: "https://upload.wikimedia.org/wikipedia/pt/2/24/The_Notebook_poster.jpg",
+                img: "https://upload.wikimedia.org/wikipedia/pt/2/24/Branca_de_neve_2025.webp",
+                badge: "Infantil",
+                youtube: "https://www.youtube.com/watch?v=X3o9GyKda1k&t=1s"
+            },
+            {
+                img: "https://upload.wikimedia.org/wikipedia/en/0/05/Frozen_%282013_film%29_poster.jpg",
+                badge: "Frozen",
+                youtube: "https://www.youtube.com/watch?v=TbQm5doF_Uc"
+            },
+            {
+                img: "https://i.ytimg.com/vi/PBrThRTfrdc/maxresdefault.jpg",
+                badge: "Aventura",
+                youtube: "https://www.youtube.com/watch?v=LKFuXETZUsI"
+            },
+            {
+                img: "https://http2.mlstatic.com/D_NQ_NP_877077-MLB83471912971_042025-O.webp",
                 badge: "Clássico",
-                youtube: "https://www.youtube.com/watch?v=FC6biTjEyZw"
-            },
-            {
-                img: "https://upload.wikimedia.org/wikipedia/en/8/81/La_La_Land_%28film%29.png",
-                youtube: "https://www.youtube.com/watch?v=0pdqf4P9MB8"
-            },
-            {
-                img: "https://upload.wikimedia.org/wikipedia/en/a/a8/500_Days_of_Summer_Poster.jpg",
-                youtube: "https://www.youtube.com/watch?v=PsD0NpFSADM"
-            },
-            {
-                img: "https://upload.wikimedia.org/wikipedia/en/a/ae/PrideandPrejudice2005.jpg",
-                youtube: "https://www.youtube.com/watch?v=1dYv5u6v55Y"
+                youtube: "https://www.youtube.com/watch?v=7TavVZMewpY"
             }
         ]
     }

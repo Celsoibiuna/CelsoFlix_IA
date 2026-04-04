@@ -1,7 +1,7 @@
 :root {
     --netflix-red: #E50914;
     --dark-bg: #141414;
-    --text-color: #ffffff;
+    --text-color: #971212;
 }
 
 * {
@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-    color: #b3b3b3;
+    color: #9e0e0e;
 }
 
 /* Navbar */
@@ -132,7 +132,7 @@ a:hover {
 .slider-title {
     font-size: 1.25vw;
     font-weight: bold;
-    color: #e5e5e5;
+    color: #c0cfc1;
     line-height: 1.25vw;
 }
 

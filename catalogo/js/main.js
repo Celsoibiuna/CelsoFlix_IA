@@ -47,9 +47,9 @@ document.addEventListener('DOMContentLoaded', () => {
             subtitle: 'Assistir agora!'
         },
         Arielly: {
-            src: 'img/cobrakaivideo.mp4',
-            title: 'Arielly',
-            subtitle: 'Bem-vinda ao catálogo da Arielly.'
+            src: 'img/bolofofos.mp4',
+            title: 'Bolofofos',
+            subtitle: 'Desenho infantil bolofofos, assista agora!'
         }
     };
 
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         container.parentElement.insertBefore(title, container);
 
         categories.forEach(category => {
-            const carousel = createCarousel(category);
+            const carousel = createCarousel(category, profileName);
             container.appendChild(carousel);
         });
     }
